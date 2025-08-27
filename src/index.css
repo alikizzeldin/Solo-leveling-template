@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'DragonForce';
+  src: url('/assets/DragonForcE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-blue: #0a0a2e;
+  --secondary-blue: #16213e;
+  --accent-blue: #0f3460;
+  --highlight-blue: #533483;
+  --gold: #ffd700;
+  --silver: #c0c0c0;
+  --shadow-color: rgba(0, 0, 0, 0.8);
+  --glow-color: rgba(83, 52, 131, 0.6);
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #333333 50%, #1a1a1a 75%, #000000 100%);
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Show default cursor on interactive elements when custom cursor is not available */
+button, a, input, textarea, select {
+  cursor: pointer;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--highlight-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--highlight-blue);
+  color: white;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
